@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 238.0, 94.0, 1101.0, 764.0 ],
+		"rect" : [ 259.0, 75.0, 1101.0, 764.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,115 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-88",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 141.0, 1585.0, 150.0, 47.0 ],
+					"text" : "click \"fullscreen\" in vpt\ndown below\nto enter fullscreen mode"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-87",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 162.0, 1372.0, 180.0, 47.0 ],
+					"text" : "multiple server\nservername: name it whatever\nvideoplane: name it whatever"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-81",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 380.0, 1470.0, 103.0, 22.0 ],
+					"text" : "servername Jitter"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-82",
+					"maxclass" : "jit.fpsgui",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 342.0, 1653.0, 80.0, 35.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-83",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "erase", "bang" ],
+					"patching_rect" : [ 342.0, 1592.0, 57.0, 22.0 ],
+					"text" : "t erase b"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-84",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 374.5, 1396.3333740234375, 223.0, 25.0 ],
+					"text" : "jit.gl.videoplane test ＠transform_reset 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-85",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 342.0, 1623.0, 91.0, 22.0 ],
+					"text" : "jit.gl.render test"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 1.0, 0.0, 0.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-86",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 357.0, 1513.0, 107.0, 22.0 ],
+					"text" : "jit.gl.syphonserver"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-79",
 					"linecount" : 6,
@@ -94,7 +203,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-17",
@@ -723,36 +831,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 185.0, 1496.0, 165.0, 22.0 ],
-					"text" : "servername \"Syphon Server\""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-77",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 72.0, 1496.0, 103.0, 22.0 ],
-					"text" : "servername Jitter"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-80",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 72.0, 1376.0, 135.0, 22.0 ],
-					"text" : "jit.noise 1 char 640 480"
+					"patching_rect" : [ 109.5, 1498.0, 116.0, 22.0 ],
+					"text" : "servername Syphon"
 				}
 
 			}
@@ -968,7 +1048,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 626.0, 171.0, 49.5, 35.0 ],
-									"text" : "0.979893"
+									"text" : "0.886016"
 								}
 
 							}
@@ -1127,7 +1207,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 488.0, 152.0, 50.0, 22.0 ],
-									"text" : "2006"
+									"text" : "9742"
 								}
 
 							}
@@ -1164,7 +1244,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 471.25, 221.0, 55.5, 22.0 ],
-									"text" : "4.012"
+									"text" : "19.484"
 								}
 
 							}
@@ -2367,7 +2447,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 622.0, 110.0, 640.0, 480.0 ],
+						"rect" : [ 373.0, 73.0, 640.0, 485.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2394,6 +2474,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-10",
@@ -2425,7 +2506,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 177.0, 304.0, 50.0, 22.0 ],
+									"patching_rect" : [ 177.0, 304.0, 29.5, 22.0 ],
 									"text" : "900"
 								}
 
@@ -2437,7 +2518,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 117.5, 296.0, 50.0, 22.0 ],
+									"patching_rect" : [ 107.5, 296.0, 39.5, 22.0 ],
 									"text" : "1440"
 								}
 
@@ -4531,6 +4612,23 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-65", 0 ],
+					"order" : 0,
+					"source" : [ "obj-67", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-84", 0 ],
+					"order" : 1,
+					"source" : [ "obj-67", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-86", 0 ],
+					"order" : 2,
 					"source" : [ "obj-67", 0 ]
 				}
 
@@ -4566,7 +4664,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-78", 0 ],
-					"midpoints" : [ 194.5, 1526.0, 58.5, 1526.0 ],
+					"midpoints" : [ 119.0, 1526.0, 58.5, 1526.0 ],
 					"source" : [ "obj-71", 0 ]
 				}
 
@@ -4588,14 +4686,16 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-73", 0 ],
+					"order" : 1,
 					"source" : [ "obj-75", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-80", 0 ],
-					"source" : [ "obj-75", 1 ]
+					"destination" : [ "obj-83", 0 ],
+					"order" : 0,
+					"source" : [ "obj-75", 0 ]
 				}
 
 			}
@@ -4608,9 +4708,30 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-78", 0 ],
-					"midpoints" : [ 81.5, 1526.0, 58.5, 1526.0 ],
-					"source" : [ "obj-77", 0 ]
+					"destination" : [ "obj-86", 0 ],
+					"midpoints" : [ 389.5, 1500.0, 366.5, 1500.0 ],
+					"source" : [ "obj-81", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-85", 0 ],
+					"source" : [ "obj-83", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-85", 0 ],
+					"source" : [ "obj-83", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-82", 0 ],
+					"source" : [ "obj-85", 0 ]
 				}
 
 			}
